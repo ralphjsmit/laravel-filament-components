@@ -6,7 +6,7 @@ use Filament\Forms\Components\Placeholder;
 
 class CreatedAt
 {
-    public static function new(): Placeholder
+    public static function make(): Placeholder
     {
         return Placeholder::make('created_at')
             ->label(tr('time.created_at'))

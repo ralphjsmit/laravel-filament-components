@@ -16,8 +16,8 @@ Currently, the following components are available:
 
 1. [Sidebar](#sidebar)
 2. [Timestamps](#timestamps)
-3. [UpdatedAt](#updated_at)
-4. [CreatedAt](#created_at)
+3. [UpdatedAt](#updatedat)
+4. [CreatedAt](#createdat)
 
 ### Sidebar
 
@@ -26,7 +26,7 @@ You can use the `Sidebar` component to split the form into two distinct sections
 ```php
 use RalphJSmit\Filament\Components\Forms\Sidebar;
 
-Sidebar::new()->schema([
+Sidebar::make()->schema([
     // Components for the main section here
 ],[
     // Components for the sidebar section here
@@ -44,15 +44,15 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 public static function form(Form $form): Form
 {
-    return Sidebar::new($form)->schema([
-        Card::new([
+    return Sidebar::make($form)->schema([
+        Card::make([
             TextInput::make('title')->label('Title'),
             // ...
         ]),
         // ...
     ], [
-        Card::new([
-            Timestamps::new(),
+        Card::make([
+            Timestamps::make(),
             // ...
         ]),
         // ...
@@ -70,7 +70,7 @@ Use the `Timestamps` component to display a 'Created at' and 'Updated at' timest
 use RalphJSmit\Filament\Components\Forms\Timestamps;
 
 return $form->schema([
-    ...Timestamps::new(),
+    ...Timestamps::make(),
     //
 ]);
 ```
@@ -85,7 +85,7 @@ Use the `CreatedAt` component to display the 'Created at' timestamp for your rec
 use RalphJSmit\Filament\Components\Forms\CreatedAt;
 
 return $form->schema([
-    CreatedAt::new(),
+    CreatedAt::make(),
     //
 ]);
 ```
@@ -98,7 +98,7 @@ Use the `UpdatedAt` component to display the 'Created at' timestamp for your rec
 use RalphJSmit\Filament\Components\Forms\UpdatedAt;
 
 return $form->schema([
-    UpdatedAt::new(),
+    UpdatedAt::make(),
     //
 ]);
 ```

@@ -4,11 +4,11 @@ namespace RalphJSmit\Filament\Components\Forms;
 
 class Timestamps
 {
-    public static function new(): array
+    public static function make(): array
     {
         return [
-            CreatedAt::new(),
-            UpdatedAt::new(),
+            CreatedAt::make(),
+            UpdatedAt::make(),
         ];
     }
 }

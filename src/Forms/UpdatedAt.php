@@ -6,7 +6,7 @@ use Filament\Forms\Components\Placeholder;
 
 class UpdatedAt
 {
-    public static function new(): Placeholder
+    public static function make(): Placeholder
     {
         return Placeholder::make('updated_at')
             ->label(tr('time.updated_at'))

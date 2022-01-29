@@ -10,7 +10,7 @@ use function Spatie\PestPluginTestTime\testTime;
 
 it('can return a dash if the created at time is null', function () {
     TestableForm::$formSchema = [
-        CreatedAt::new(),
+        CreatedAt::make(),
     ];
 
     testTime()->freeze();
@@ -26,7 +26,7 @@ it('can return a dash if the created at time is null', function () {
 
 it('can return the created at time', function () {
     TestableForm::$formSchema = [
-        CreatedAt::new(),
+        CreatedAt::make(),
     ];
 
     testTime()->freeze();

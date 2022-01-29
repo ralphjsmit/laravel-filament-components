@@ -9,7 +9,7 @@ use function Spatie\PestPluginTestTime\testTime;
 
 it('can return the timestamps', function () {
     TestableForm::$formSchema = [
-        ...Timestamps::new(),
+        ...Timestamps::make(),
     ];
 
     testTime()->freeze();

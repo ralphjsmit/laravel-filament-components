@@ -8,7 +8,7 @@ use function Spatie\PestPluginTestTime\testTime;
 
 it('can create a sidebar', function () {
     TestableForm::$formSchema = [
-        Sidebar::new()->schema(
+        Sidebar::make()->schema(
             mainComponents: [
                 \Filament\Forms\Components\Placeholder::make('dummy_placeholder'),
                 \Filament\Forms\Components\Placeholder::make('dummy_placeholder_2'),

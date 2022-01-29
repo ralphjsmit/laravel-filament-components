@@ -11,7 +11,7 @@ class Sidebar
         public Form $form,
     ) {}
 
-    public static function new(Form $form = null): static
+    public static function make(Form $form = null): static
     {
         if ( ! $form ) {
             $form = Form::make();
