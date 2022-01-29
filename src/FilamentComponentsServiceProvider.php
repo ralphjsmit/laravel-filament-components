@@ -12,6 +12,7 @@ class FilamentComponentsServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-filament-components')
             ->hasConfigFile()
-            ->hasViews('filament-components');
+            ->hasViews('filament-components')
+            ->hasTranslations();
     }
 }
