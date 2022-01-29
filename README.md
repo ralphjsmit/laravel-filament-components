@@ -36,6 +36,7 @@ Sidebar::new()->schema([
 If you're using it in the Admin panel, you can directly return the `Sidebar` component from the `form()` in your resource:
 
 ```php
+use Filament\Forms\Components\Card;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use RalphJSmit\Filament\Components\Forms\Timestamps;
