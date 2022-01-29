@@ -48,12 +48,58 @@ public static function form(Form $form): Form
             TextInput::make('title')->label('Title'),
             // ...
         ]),
+        // ...
     ], [
         Card::new([
             Timestamps::new(),
+            // ...
         ]),
+        // ...
     ]);
 }
+```
+
+Sidebars work very nicely with the card component to define distinct and easily scannable sections in your interface.
+
+## Timestamps
+
+Use the `Timestamps` component to display a 'Created at' and 'Updated at' timestamp for your record:
+
+```php
+use RalphJSmit\Filament\Components\Forms\Timestamps;
+
+return $form->schema([
+    ...Timestamps::new(),
+    //
+]);
+```
+
+The `Timestamps` component returns an array with the `CreatedAt` and `UpdatedAt` components below, so you should use array spreading like in the example to merge the components into your own array.
+
+## CreatedAt
+
+Use the `CreatedAt` component to display the 'Created at' timestamp for your record:
+
+```php
+use RalphJSmit\Filament\Components\Forms\CreatedAt;
+
+return $form->schema([
+    CreatedAt::new(),
+    //
+]);
+```
+
+## UpdatedAt
+
+Use the `UpdatedAt` component to display the 'Created at' timestamp for your record:
+
+```php
+use RalphJSmit\Filament\Components\Forms\UpdatedAt;
+
+return $form->schema([
+    UpdatedAt::new(),
+    //
+]);
 ```
 
 ## General
