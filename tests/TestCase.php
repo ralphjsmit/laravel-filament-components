@@ -2,7 +2,8 @@
 
 namespace RalphJSmit\Filament\Components\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Filament\Forms\FormsServiceProvider;
+use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RalphJSmit\Filament\Components\FilamentComponentsServiceProvider;
 
@@ -17,13 +18,14 @@ class TestCase extends Orchestra
     {
         return [
             FilamentComponentsServiceProvider::class,
+            LivewireServiceProvider::class,
+            FormsServiceProvider::class,
         ];
     }
 
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
-
         /*
         $migration = include __DIR__.'/../database/migrations/create_laravel-filament-components_table.php.stub';
         $migration->up();
