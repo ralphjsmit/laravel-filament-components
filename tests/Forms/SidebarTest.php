@@ -11,9 +11,11 @@ it('can create a sidebar', function () {
         Sidebar::new()->schema(
             mainComponents: [
                 \Filament\Forms\Components\Placeholder::make('dummy_placeholder'),
+                \Filament\Forms\Components\Placeholder::make('dummy_placeholder_2'),
             ],
             sidebarComponents: [
                 Filament\Forms\Components\TextInput::make('name')->label('Test label for sidebar component'),
+                Filament\Forms\Components\TextInput::make('name')->label('Test label 2 for sidebar component'),
             ]
         )->getSchema()[0],
     ];
@@ -24,5 +26,7 @@ it('can create a sidebar', function () {
 
     $component
         ->assertSee('dummy_placeholder')
-        ->assertSee('Test label for sidebar component');
+        ->assertSee('dummy_placeholder_2')
+        ->assertSee('Test label for sidebar component')
+        ->assertSee('Test label 2 for sidebar component');
 });
