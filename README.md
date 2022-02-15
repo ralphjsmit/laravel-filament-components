@@ -79,7 +79,7 @@ The `Timestamps` component returns an array with the `CreatedAt` and `UpdatedAt`
 
 ## CreatedAt
 
-Use the `CreatedAt` component to display the 'Created at' timestamp for your record:
+Use the `CreatedAt` component to display the `created_at` timestamp for your record:
 
 ```php
 use RalphJSmit\Filament\Components\Forms\CreatedAt;
@@ -92,7 +92,7 @@ return $form->schema([
 
 ## UpdatedAt
 
-Use the `UpdatedAt` component to display the 'Created at' timestamp for your record:
+Use the `UpdatedAt` component to display the `updated_at` timestamp for your record:
 
 ```php
 use RalphJSmit\Filament\Components\Forms\UpdatedAt;
