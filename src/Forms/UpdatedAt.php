@@ -10,6 +10,6 @@ class UpdatedAt
     {
         return Placeholder::make('updated_at')
             ->label(tr('time.updated_at'))
-            ->content(fn ($record): string => $record->updated_at ? $record->updated_at->diffForHumans() : '-');
+            ->content(fn ($record): string => $record?->updated_at ? $record->updated_at->diffForHumans() : '-');
     }
 }

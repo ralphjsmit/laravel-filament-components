@@ -8,6 +8,22 @@ use RalphJSmit\Filament\Components\Tests\Support\TestableForm;
 
 use function Spatie\PestPluginTestTime\testTime;
 
+it('can return a dash if the record is null', function () {
+    TestableForm::$formSchema = [
+        CreatedAt::make(),
+    ];
+
+    testTime()->freeze();
+
+    $component = Livewire::test(TestableForm::class, [
+        'record' => null,
+    ]);
+
+    $component
+        ->assertSet('record.created_at', null)
+        ->assertSee('-');
+});
+
 it('can return a dash if the created at time is null', function () {
     TestableForm::$formSchema = [
         CreatedAt::make(),

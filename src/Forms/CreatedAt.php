@@ -10,6 +10,6 @@ class CreatedAt
     {
         return Placeholder::make('created_at')
             ->label(tr('time.created_at'))
-            ->content(fn ($record): string => $record->created_at ? $record->created_at->diffForHumans() : '-');
+            ->content(fn ($record): string => $record?->created_at ? $record->created_at->diffForHumans() : '-');
     }
 }
