@@ -2,7 +2,7 @@
 
 This package is a collection of handy components for you to use in all your Filament projects. It provides handy components that can be used in almost any project, like sidebars, timestamps & more.
 
-PRs are welcome, so if you've made a handy component yourself, feel free to send a pull request!
+**PRs are welcome, so if you've made a handy component yourself, feel free to send a pull request!**
 
 ## Installation
 
