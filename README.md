@@ -1,3 +1,5 @@
+![laravel-filament-components](https://github.com/ralphjsmit/laravel-filament-components/blob/main/docs/images/laravel-filament-components.jpg)
+
 # A collection of reusable components for Filament.
 
 This package is a collection of handy components for you to use in all your Filament projects. It provides handy components that can be used in almost any project, like sidebars, timestamps & more.
