@@ -6,8 +6,8 @@ use Filament\Forms\Components\Placeholder;
 
 class DeletedAt
 {
-    public static function make(): Placeholder
+    public static function make(string $label = null): Placeholder
     {
-        return Timestamp::make('deleted_at');
+        return Timestamp::make('deleted_at', $label);
     }
 }
