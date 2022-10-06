@@ -4,10 +4,10 @@ namespace RalphJSmit\Filament\Components\Forms;
 
 use Filament\Forms\Components\Placeholder;
 
-class UpdatedAt
+class DeletedAt
 {
     public static function make(string $label = null): Placeholder
     {
-        return Timestamp::make('updated_at', $label);
+        return Timestamp::make('deleted_at', $label);
     }
 }

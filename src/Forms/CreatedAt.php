@@ -6,10 +6,8 @@ use Filament\Forms\Components\Placeholder;
 
 class CreatedAt
 {
-    public static function make(): Placeholder
+    public static function make(string $label = null): Placeholder
     {
-        return Placeholder::make('created_at')
-            ->label(tr('time.created_at'))
-            ->content(fn ($record): string => $record?->created_at ? $record->created_at->diffForHumans() : '-');
+        return Timestamp::make('created_at', $label);
     }
 }
