@@ -9,8 +9,8 @@ class Timestamp
     public static function make(string $column, string $label = null): Placeholder
     {
         return Placeholder::make($column)
-            ->label(function () use ($column, $label) {
-                if ($label) {
+            ->label(function () use ($column, $label): ?string {
+                if ( $label ) {
                     return $label;
                 }
 
