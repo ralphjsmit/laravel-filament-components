@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 1.1.1 - 2022-10-06
+
+– Add DeletedAt column, support general Timestamp column by #10.
+
 ## 1.1.0 - 2022-03-22
 
 - Laravel 9 support
