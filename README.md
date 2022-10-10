@@ -22,6 +22,8 @@ Currently, the following components are available:
 2. [Timestamps](#timestamps)
 3. [UpdatedAt](#updatedat)
 4. [CreatedAt](#createdat)
+5. [DeletedAt](#deletedat)
+6. [Timestamp](#timestamp)
 
 ### Sidebar
 
@@ -103,6 +105,33 @@ use RalphJSmit\Filament\Components\Forms\UpdatedAt;
 
 return $form->schema([
     UpdatedAt::make(),
+    //
+]);
+```
+
+## DeletedAt
+
+Use the `DeletedAt` component to display the `deleted_at` timestamp for your soft-delete record:
+
+```php
+use RalphJSmit\Filament\Components\Forms\DeletedAt;
+
+return $form->schema([
+    DeletedAt::make(),
+    //
+]);
+```
+
+## Timestamp
+
+Use the `Timestamp` component to display a custom timestamp for your record. Internally, all of the above timestamps
+use this component.
+
+```php
+use RalphJSmit\Filament\Components\Forms\Timestamp;
+
+return $form->schema([
+    Timestamp::make('email_verified_at'),
     //
 ]);
 ```
