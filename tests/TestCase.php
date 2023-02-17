@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders(mixed $app): array
     {
         return [
             FilamentComponentsServiceProvider::class,
@@ -25,12 +25,8 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
-        config()->set('database.default', 'testing');
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-filament-components_table.php.stub';
-        $migration->up();
-        */
+        //
     }
 }
