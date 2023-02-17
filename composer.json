@@ -1,69 +1,70 @@
 {
-    "name": "ralphjsmit/laravel-filament-components",
-    "description": "A collection of reusable components for Filament.",
-    "keywords": [
+    "name" : "ralphjsmit/laravel-filament-components",
+    "description" : "A collection of reusable components for Filament.",
+    "keywords" : [
         "ralphjsmit",
         "laravel",
         "laravel-filament-components"
     ],
-    "homepage": "https://github.com/ralphjsmit/laravel-filament-components",
-    "license": "MIT",
-    "authors": [
+    "homepage" : "https://github.com/ralphjsmit/laravel-filament-components",
+    "license" : "MIT",
+    "authors" : [
         {
-            "name": "Ralph J. Smit",
-            "email": "rjs@ralphjsmit.com",
-            "role": "Developer"
+            "name" : "Ralph J. Smit",
+            "email" : "rjs@ralphjsmit.com",
+            "role" : "Developer"
         }
     ],
-    "require": {
-        "php": "^8.0",
-        "filament/filament": "^2.10",
-        "filament/forms": "^2.10",
-        "illuminate/contracts": "^8.73|^9.0",
-        "spatie/laravel-package-tools": "^1.9.2"
+    "require" : {
+        "php" : "^8.0",
+        "filament/filament" : "^2.12",
+        "filament/forms" : "^2.10",
+        "illuminate/contracts" : "^8.73|^9.0|^10.0",
+        "spatie/laravel-package-tools" : "^1.9.2"
     },
-    "require-dev": {
-        "nunomaduro/collision": "^5.10|^6.0",
-        "orchestra/testbench": "^6.22|^7.0",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.1",
-        "phpunit/phpunit": "^9.5",
-        "spatie/laravel-ray": "^1.26",
-        "spatie/pest-plugin-test-time": "^1.0"
+    "require-dev" : {
+        "nunomaduro/collision" : "^5.10|^6.0|^7.0",
+        "orchestra/testbench" : "^6.22|^7.0|^8.0",
+        "pestphp/pest" : "^1.21",
+        "pestphp/pest-plugin-laravel" : "^1.1",
+        "phpunit/phpunit" : "^9.5|^10.0",
+        "spatie/laravel-ray" : "^1.26",
+        "spatie/pest-plugin-test-time" : "^1.0",
+        "nesbot/carbon" : "^2.66"
     },
-    "autoload": {
-        "psr-4": {
-            "RalphJSmit\\Filament\\Components\\": "src"
+    "autoload" : {
+        "psr-4" : {
+            "RalphJSmit\\Filament\\Components\\" : "src"
         },
-        "files": [
+        "files" : [
             "src/Support/helpers.php"
         ]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "RalphJSmit\\Filament\\Components\\Tests\\": "tests"
+    "autoload-dev" : {
+        "psr-4" : {
+            "RalphJSmit\\Filament\\Components\\Tests\\" : "tests"
         }
     },
-    "scripts": {
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage"
+    "scripts" : {
+        "test" : "vendor/bin/pest",
+        "test-coverage" : "vendor/bin/pest --coverage"
     },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
+    "config" : {
+        "sort-packages" : true,
+        "allow-plugins" : {
+            "pestphp/pest-plugin" : true
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
+    "extra" : {
+        "laravel" : {
+            "providers" : [
                 "RalphJSmit\\Filament\\Components\\FilamentComponentsServiceProvider"
             ],
-            "aliases": {
-                "FilamentComponents": "RalphJSmit\\Filament\\Components\\Facades\\FilamentComponents"
+            "aliases" : {
+                "FilamentComponents" : "RalphJSmit\\Filament\\Components\\Facades\\FilamentComponents"
             }
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability" : "dev",
+    "prefer-stable" : true
 }
