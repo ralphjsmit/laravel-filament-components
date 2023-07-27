@@ -8,10 +8,10 @@ use Filament\Resources\Form;
 class Sidebar
 {
     public function __construct(
-        public Form $form,
+        public Form|\Filament\Forms\Form $form,
     ) {}
 
-    public static function make(Form $form = null): static
+    public static function make(Form|\Filament\Forms\Form|null $form = null): static
     {
         if ( ! $form ) {
             $form = Form::make();
@@ -20,7 +20,7 @@ class Sidebar
         return new static(form: $form);
     }
 
-    public function schema(array $mainComponents, array $sidebarComponents): Form
+    public function schema(array $mainComponents, array $sidebarComponents): Form|\Filament\Forms\Form
     {
         return $this->form->schema([
             Grid::make(['sm' => 3])->schema([
