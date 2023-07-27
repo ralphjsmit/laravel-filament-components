@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 1.3.1 - 2023-07-27
+
+- Fix Sidebar component in Filament V3.
+
 ## 1.3.0 - 2023-07-20
 
 - Add Filament V3 support
