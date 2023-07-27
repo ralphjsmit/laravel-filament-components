@@ -14,7 +14,10 @@ class Sidebar
     public static function make(Form|\Filament\Forms\Form|null $form = null): static
     {
         if ( ! $form ) {
-            $form = Form::make();
+            $form = match ( true ) {
+                class_exists(Form::class) => Form::make(),
+                default => \Filament\Forms\Form::make(),
+            };
         }
 
         return new static(form: $form);
