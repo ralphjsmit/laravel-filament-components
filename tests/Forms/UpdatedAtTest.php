@@ -32,7 +32,7 @@ it('can return a dash if the updated at time is null', function () {
     testTime()->freeze();
 
     $component = Livewire::test(TestableForm::class, [
-        'record' => $record = Record::factory()->make(['updated_at' => null]),
+        'record' => $record = Record::factory()->create(['updated_at' => null]),
     ]);
 
     $component
@@ -48,7 +48,7 @@ it('can return the updated at time', function () {
     testTime()->freeze();
 
     $component = Livewire::test(TestableForm::class, [
-        'record' => $record = Record::factory()->make(['updated_at' => now()->subMinutes(10)]),
+        'record' => $record = Record::factory()->create(['updated_at' => now()->subMinutes(10)]),
     ]);
 
     $component
