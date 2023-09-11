@@ -15,7 +15,7 @@ it('can return the timestamps', function () {
     testTime()->freeze();
 
     $component = Livewire::test(TestableForm::class, [
-        'record' => $record = Record::factory()->make(['created_at' => now()->subMinutes(10), 'updated_at' => now()->subMinutes(15)]),
+        'record' => $record = Record::factory()->create(['created_at' => now()->subMinutes(10), 'updated_at' => now()->subMinutes(15)]),
     ]);
 
     $component
