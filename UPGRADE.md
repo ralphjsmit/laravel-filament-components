@@ -1,14 +1,25 @@
 # Upgrade
 
-## Sidebar
-
-Use the method `make` instead of `schema` in order to separate the main sections from the sidebar sections.
+## From 1.x to 2.x
+       
+The `Sidebar::make()` method's signature was changed. Previously it accepted a `$form` parameter and returned a form. Now you can just use the `Sidebar::make()` method inside any form schema:
  
 ```diff
--Sidebar::make()->schema()->([
-+Sidebar::make()->([
-    // Components for the main section here
-],[
-    // Components for the sidebar section here
-])
-```
+-public static function form(Form $form): Form
+-{
+-    return Sidebar::make($form)->schema([
+-        // Main components
+-    ], [
+-        // Sidebar components
+-    ]);
+-}
++public static function form(Form $form): Form
++{
++    return $form->schema([
++        Sidebar::make([
++            // Main components
++        ], [
++            // Sidebar components
++        ]),
++   ]);
++}
