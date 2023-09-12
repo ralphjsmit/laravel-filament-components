@@ -8,7 +8,7 @@ use function Spatie\PestPluginTestTime\testTime;
 
 it('can create a sidebar', function () {
     TestableForm::$formSchema = [
-        Sidebar::make()->schema(
+        Sidebar::make(
             mainComponents: [
                 \Filament\Forms\Components\Placeholder::make('dummy_placeholder'),
                 \Filament\Forms\Components\Placeholder::make('dummy_placeholder_2'),
@@ -17,7 +17,7 @@ it('can create a sidebar', function () {
                 Filament\Forms\Components\TextInput::make('name')->label('Test label for sidebar component'),
                 Filament\Forms\Components\TextInput::make('name')->label('Test label 2 for sidebar component'),
             ]
-        )->getSchema()[0],
+        ),
     ];
 
     testTime()->freeze();
