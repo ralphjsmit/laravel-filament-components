@@ -39,7 +39,7 @@ Sidebar::make([
 ])
 ```
 
-If you're using it in the Admin panel, you can directly return the `Sidebar` component from the `form()` in your resource:
+If you're using it in the Admin panel, you can use the `Sidebar` in your `form()` method:
 
 ```php
 use Filament\Forms\Components\Card;
@@ -50,18 +50,20 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 public static function form(Form $form): Form
 {
-    return Sidebar::make([
-        Card::make([
-            TextInput::make('title')->label('Title'),
+    return $form->schema([
+        Sidebar::make([
+            Card::make([
+                TextInput::make('title')->label('Title'),
+                // ...
+            ]),
+            // ...
+        ], [
+            Card::make([
+                ...Timestamps::make(),
+                // ...
+            ]),
             // ...
         ]),
-        // ...
-    ], [
-        Card::make([
-            ...Timestamps::make(),
-            // ...
-        ]),
-        // ...
     ]);
 }
 ```
