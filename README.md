@@ -50,7 +50,7 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 public static function form(Form $form): Form
 {
-    return Sidebar::schema([
+    return Sidebar::make([
         Card::make([
             TextInput::make('title')->label('Title'),
             // ...
