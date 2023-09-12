@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 2.0.0 - 2023-09-12
+
+- Updated `Sidebar` component syntax in #24.
+
 ## 1.3.2 - 2023-08-07
 
 - Arabic translations.
