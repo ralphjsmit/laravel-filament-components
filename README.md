@@ -52,16 +52,18 @@ public static function form(Form $form): Form
 {
     return $form->schema([
         Sidebar::make([
-            Section::make()->schema([
-                TextInput::make('title')->label('Title'),
-                // ...
-            ]),
+            Section::make()
+                ->schema([
+                    TextInput::make('title')->label('Title'),
+                    // ...
+                ]),
             // ...
         ], [
-            Section::make()->schema([
-                ...Timestamps::make(),
-                // ...
-            ]),
+            Section::make()
+                ->schema([
+                    ...Timestamps::make(),
+                    // ...
+                ]),
             // ...
         ]),
     ]);
