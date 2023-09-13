@@ -42,7 +42,7 @@ Sidebar::make([
 If you're using it in the Admin panel, you can use the `Sidebar` in your `form()` method:
 
 ```php
-use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use RalphJSmit\Filament\Components\Forms\Timestamps;
@@ -52,23 +52,25 @@ public static function form(Form $form): Form
 {
     return $form->schema([
         Sidebar::make([
-            Card::make([
-                TextInput::make('title')->label('Title'),
-                // ...
-            ]),
+            Section::make()
+                ->schema([
+                    TextInput::make('title')->label('Title'),
+                    // ...
+                ]),
             // ...
         ], [
-            Card::make([
-                ...Timestamps::make(),
-                // ...
-            ]),
+            Section::make()
+                ->schema([
+                    ...Timestamps::make(),
+                    // ...
+                ]),
             // ...
         ]),
     ]);
 }
 ```
 
-Sidebars work very nicely with the card component to define distinct and easily scannable sections in your interface.
+Sidebars work very nicely with the Section component to define distinct and easily scannable sections in your interface.
 
 ## Timestamps
 
