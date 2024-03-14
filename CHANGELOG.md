@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 2.1.0 - 2024-03-14
+
+- Laravel 11 Compatibility
+
 ## 2.0.0 - 2023-09-12
 
 - Updated `Sidebar` component syntax in #24.
