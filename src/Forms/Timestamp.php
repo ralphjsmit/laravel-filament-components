@@ -6,15 +6,15 @@ use Filament\Forms\Components\Placeholder;
 
 class Timestamp
 {
-    public static function make(string $column, string $label = null): Placeholder
+    public static function make(string $column, ?string $label = null): Placeholder
     {
         return Placeholder::make($column)
             ->label(function () use ($column, $label): ?string {
-                if ( $label ) {
+                if ($label) {
                     return $label;
                 }
 
-                return match ( $column ) {
+                return match ($column) {
                     'created_at' => tr('time.created_at'),
                     'updated_at' => tr('time.updated_at'),
                     'deleted_at' => tr('time.deleted_at'),

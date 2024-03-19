@@ -5,7 +5,6 @@ namespace RalphJSmit\Filament\Components\Tests;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RalphJSmit\Filament\Components\FilamentComponentsServiceProvider;
