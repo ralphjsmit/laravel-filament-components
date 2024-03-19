@@ -12,6 +12,7 @@ class TestableForm extends Component implements HasForms
     use InteractsWithForms;
 
     public static array $formSchema = [];
+
     public array $data = [];
 
     public $record;
@@ -23,7 +24,7 @@ class TestableForm extends Component implements HasForms
         return view('filament-components::tests.support.testable-form');
     }
 
-    protected function getFormModel(): Model|string|null
+    protected function getFormModel(): Model | string | null
     {
         return $this->record;
     }
