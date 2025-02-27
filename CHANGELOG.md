@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 2.2.0 - 2025-02-27
+
+- Laravel 12 support
+
 ## 2.1.0 - 2024-03-14
 
 - Laravel 11 Compatibility
