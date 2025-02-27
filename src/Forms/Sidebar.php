@@ -10,8 +10,7 @@ class Sidebar
     public function __construct(
         public array | Closure $mainComponents,
         public array | Closure $sidebarComponents
-    ) {
-    }
+    ) {}
 
     public static function make(array | Closure $mainComponents, array | Closure $sidebarComponents): Grid
     {
