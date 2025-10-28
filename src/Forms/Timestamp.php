@@ -2,13 +2,13 @@
 
 namespace RalphJSmit\Filament\Components\Forms;
 
-use Filament\Forms\Components\Placeholder;
+use Filament\Infolists\Components\TextEntry;
 
 class Timestamp
 {
-    public static function make(string $column, ?string $label = null): Placeholder
+    public static function make(string $column, ?string $label = null): TextEntry
     {
-        return Placeholder::make($column)
+        return TextEntry::make($column)
             ->label(function () use ($column, $label): ?string {
                 if ($label) {
                     return $label;
@@ -21,6 +21,6 @@ class Timestamp
                     default => null,
                 };
             })
-            ->content(fn ($record): string => $record?->$column ? $record->$column->diffForHumans() : '-');
+            ->state(fn ($record): string => $record?->$column ? $record->$column->diffForHumans() : '-');
     }
 }

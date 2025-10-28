@@ -3,7 +3,7 @@
 namespace RalphJSmit\Filament\Components\Forms;
 
 use Closure;
-use Filament\Forms\Components\Grid;
+use Filament\Schemas\Components\Grid;
 
 class Sidebar
 {
