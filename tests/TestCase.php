@@ -3,6 +3,8 @@
 namespace RalphJSmit\Filament\Components\Tests;
 
 use Filament\Forms\FormsServiceProvider;
+use Filament\Infolists\InfolistsServiceProvider;
+use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
 use Livewire\LivewireServiceProvider;
@@ -22,9 +24,11 @@ class TestCase extends Orchestra
     {
         return [
             FilamentComponentsServiceProvider::class,
-            LivewireServiceProvider::class,
             FormsServiceProvider::class,
             SupportServiceProvider::class,
+            SchemasServiceProvider::class,
+            InfolistsServiceProvider::class,
+            LivewireServiceProvider::class,
         ];
     }
 

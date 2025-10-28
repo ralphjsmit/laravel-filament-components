@@ -21,6 +21,6 @@ class Timestamp
                     default => null,
                 };
             })
-            ->content(fn ($record): string => $record?->$column ? $record->$column->diffForHumans() : '-');
+            ->state(fn ($record): string => $record?->$column ? $record->$column->diffForHumans() : '-');
     }
 }
