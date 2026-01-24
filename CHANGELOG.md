@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 3.1.0 - 2026-01-24
+
+- Feat: Filament V5 support
+
 ## 3.0.0 - 2025-10-28
 
 - Filament V4 support by @giacomomasseron
