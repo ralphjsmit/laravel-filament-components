@@ -1,5 +1,7 @@
 <?php
 
+use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\TextInput;
 use Livewire\Livewire;
 use RalphJSmit\Filament\Components\Forms\Sidebar;
 use RalphJSmit\Filament\Components\Tests\Support\TestableForm;
@@ -10,12 +12,12 @@ it('can create a sidebar', function () {
     TestableForm::$formSchema = [
         Sidebar::make(
             mainComponents: [
-                \Filament\Forms\Components\Placeholder::make('dummy_placeholder'),
-                \Filament\Forms\Components\Placeholder::make('dummy_placeholder_2'),
+                Placeholder::make('dummy_placeholder'),
+                Placeholder::make('dummy_placeholder_2'),
             ],
             sidebarComponents: [
-                Filament\Forms\Components\TextInput::make('name')->label('Test label for sidebar component'),
-                Filament\Forms\Components\TextInput::make('name')->label('Test label 2 for sidebar component'),
+                TextInput::make('name')->label('Test label for sidebar component'),
+                TextInput::make('name')->label('Test label 2 for sidebar component'),
             ]
         ),
     ];
