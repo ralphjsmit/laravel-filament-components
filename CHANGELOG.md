@@ -2,6 +2,10 @@
 
 All notable changes to `ralphjsmit/laravel-filament-components` will be documented in this file.
 
+## 3.2.1 - 2026-11-03
+
+- Chore: improve package health in #45
+
 ## 3.2.0 - 2026-03-24
 
 - Feat: Laravel 13 support
